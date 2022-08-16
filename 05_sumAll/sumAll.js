@@ -1,7 +1,11 @@
 const sumAll = function(num1,num2) {
     let startValue;
     let endValue;
-    if (start > end) {
+    let errorMessage = 'ERROR';
+    if (typeof num1 != "number" || typeof num2 != "number" || (num1 < 0) || (num2 < 0)) {
+        return errorMessage;
+    }
+    else if (num1 > num2) {
         startValue = num2 - 1;
         endValue = num1;
     }
